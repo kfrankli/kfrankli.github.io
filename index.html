@@ -74,7 +74,7 @@
                 $("#fm1").submit(function () {
                     $(":submit").attr("disabled", true);
                     $(":submit").attr("value", i);
-                    alert("HAHAHA You've been phished!!!! Seriously though TA, your password/username weren't recorded. I'm not a monster. Source code at: https://github.com/kfrankli/kfrankli.github.io");
+                    window.location.href = "./rr.html"
                     return true;
                 });
             </script>
@@ -116,7 +116,7 @@
 </form>
 <div id="providers" style="display:none">
                 <script>
-            var redirectTo = "./rr.html";
+            var redirectTo = $( "a[autoRedirect=true]" ).attr("href")
             if (redirectTo != null && redirectTo != undefined) {
                 window.location.href = redirectTo;
             }
